@@ -60,14 +60,14 @@ Supervised machine learning models will then leverage this data to predict the p
    **Epic 1:** 
    - Perform an exhaustive exploratory data analysis of the various fields
 	  
-	**Stories:** 
+	**Stories:** <br /> 
 	(1) Ensure detailed understanding of the meaning and value of the different columns in the dataset <br /> 
 	(2) Calculate basic statistics, plot distributions, check for missing, null values or duplicate data <br /> 
    
    **Epic 2:** 
 	- Explore scope for feature engineering and data manipulation
     
-	 **Stories:** 
+	 **Stories:** <br /> 
 	(1) Are there certain symptoms that can be grouped because they mean the same thing and tend to occur together in the dataset? <br /> 
 	(2) Is the dataset huge and should it be subsetted in any way for the purpose of this project? If yes, how should that be done? <br /> 
 	(3)  Explore the possibility to add additional datasets (such as severity of disease, information about the disease)<br /> 
@@ -78,16 +78,16 @@ Supervised machine learning models will then leverage this data to predict the p
      **Epic 1:** 
 	- Run model iterations
 	
-		**Stories:** 
-		(1) Study about the different type of models that work well with such datasets (all categorical variables)
-		(2) How should the dataset be split into test and train?
-		(3) Run different models, compute accuracy (CCR, AUC) and consolidate results in a table
+	 **Stories:** <br /> 
+	(1) Study about the different type of models that work well with such datasets (all categorical variables) <br /> 
+	(2) How should the dataset be split into test and train? <br /> 
+	(3) Run different models, compute accuracy (CCR, AUC) and consolidate results in a table <br /> 
 
   **Epic 2:** 
 	- Select best model and pre-compute predictions
 	
-		**Stories:**
-		(1) For the best model, pre-compute the predicted probabilities for all diseases for all possible input combinations and store them in a dataset
+	**Stories:** <br /> 
+	(1) For the best model, pre-compute the predicted probabilities for all diseases for all possible input combinations and store them in a dataset <br /> 
 
 - **Initiative 3:** Build an informative and easy-to-use app in a way that helps users better understand  their condition and treat it sooner rather than later
    
@@ -95,11 +95,11 @@ Supervised machine learning models will then leverage this data to predict the p
    - Design and build user interface
 	  
 	  
-		  **Stories:** 
-			(1) Build the app with basic functionality - which allows user to enter inputs and then view the disease predictions
-			(2) Expose app to final dataset with the pre-computed predictions
-			(3) Add additional functionalities (such as, information about disease, its severity)
-			(4) Add visualizations talking about the number of yearly cases of diseases
+	**Stories:** <br /> 
+	(1) Build the app with basic functionality - which allows user to enter inputs and then view the disease predictions <br /> 
+	(2) Expose app to final dataset with the pre-computed predictions <br /> 
+	(3) Add additional functionalities (such as, information about disease, its severity) <br /> 
+	(4) Add visualizations talking about the number of yearly cases of diseases <br /> 
 		
 ## Backlog
 
