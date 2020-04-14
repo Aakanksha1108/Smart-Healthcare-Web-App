@@ -26,12 +26,12 @@ QA: *Jing Ren*
 ### Vision: 
 One of the primary causes of treatment failures is the late identification and diagnosis of diseases. People are often unaware of different illnesses, the associated early indicators as well as their severity. This causes them to ignore the symptoms and let the condition worsen by the time they decide to finally visit a physician.
 
-The **Smart Healthcare app**  aims to augment the treatment process for all users. It  requires the user to select their symptoms and in turn provides a ranked list of 10 potential disease conditions that could be causing it. The app also details out some additional information about the various diseases and highlights the specific ones that are time-sensitive and should be taken seriously.
+The **Smart Healthcare app**  aims to augment the treatment process for all users. It  requires the user to select their symptoms and in turn provides a ranked list of 10 potential disease conditions that could be causing it. The app also details out some additional information about those diseases and highlights the specific ones that are time-sensitive and should be taken seriously.
 
 ### Mission:
 The **Smart Healthcare app** will be built on top of a [knowledge database](http://people.dbmi.columbia.edu/~friedma/Projects/DiseaseSymptomKB/index.html) of disease-symptom associations put together by the New York Presbyterian Hospital and made available for educational purposes. 
 
-Supervised machine learning models will then leverage this data to predict the probability of various diseases based on the selected symptoms. 
+Supervised machine learning models will then leverage this data to predict the probability of various diseases corresponding to the selected symptoms. 
 
 ### Success criteria
  1. **For the business:** 
@@ -41,7 +41,7 @@ Supervised machine learning models will then leverage this data to predict the p
       B.  *Monthly Usage:* For the users who have downloaded the app, monthly usage should be ~2000 visits (Roughly, 2 visits per user per month)
  2. **For the model:** 
  
-      As the response variable (disease condition) is categorical in nature, the measure for evaluating model performance would be correct classification rate (CCR). As this is real-world data and the symptop-disease relationship could be quite fuzzy, the target CCR is 70% (threshold, below which the model/app will not be deployed)
+      As the response variable (disease condition) is categorical in nature, the measure for evaluating model performance would be correct classification rate (CCR). As this is real-world data and the symptom-disease relationship could be quite fuzzy, the target CCR is 70% (threshold, below which the model/app will not be deployed)
 
 ## Planning
 
@@ -49,7 +49,7 @@ Supervised machine learning models will then leverage this data to predict the p
 
  - Assess quality (completeness, consistency and correctness) of the
    input data and perform feature engineering, where applicable
- - Develop multinomial classification models to identify patterns in symptoms (independent variables) and estimate their relationship with a particular disease (dependent variable)
+ - Develop multinomial classification models to identify patterns in symptoms (independent variables) and estimate their relationship with the various diseases (dependent variable)
   - Build an informative and easy-to-use app in a way that helps users better understand  their condition and treat it sooner rather than later
 
 ### Epics & Stories
@@ -60,45 +60,46 @@ Supervised machine learning models will then leverage this data to predict the p
    **Epic 1:** 
    - Perform an exhaustive exploratory data analysis of the various fields
 	  
-	  **Stories:** 
-		(1) Ensure detailed understanding of the meaning and value of the different columns in the dataset
-		(2) Calculate basic statistics, plot distributions, check for missing, null values or duplicate data
+		  **Stories:** 
+			(1) Ensure detailed understanding of the meaning and value of the different columns in the dataset
+			(2) Calculate basic statistics, plot distributions, check for missing, null values or duplicate data
    
    **Epic 2:** 
 	- Explore scope for feature engineering and data manipulation
     
 	    **Stories:** 
-		(1) Are there certain symptoms that can be grouped because they mean the same thing and co-occur in the dataset? 
+		(1) Are there certain symptoms that can be grouped because they mean the same thing and tend to occur together in the dataset? 
 		(2) Is the dataset huge and should it be subsetted in any way for the purpose of this project? If yes, how should that be done? 
 		(3)  Explore the possibility to add additional datasets (such as severity of disease, information about the disease)
  
 - **Initiative 2:**  
-	- Develop multinomial classification models to identify patterns in symptoms (independent variables) and estimate their relationship with a particular disease (dependent variable)
+	- Develop multinomial classification models to identify patterns in symptoms (independent variables) and estimate their relationship with the various diseases (dependent variable)
    
      **Epic 1:** 
 	- Run model iterations
 	
-		 **Stories:** 
+		**Stories:** 
 		(1) Study about the different type of models that work well with such datasets (all categorical variables)
 		(2) How should the dataset be split into test and train?
-		(3) Run different models, compute accuracy (CCR, AUC) and put it together in a table
+		(3) Run different models, compute accuracy (CCR, AUC) and consolidate results in a table
 
   **Epic 2:** 
 	- Select best model and pre-compute predictions
 	
 		**Stories:**
-	(1) For the best model, pre-compute the predicted probabilities for all diseases for all possible input combinations and store them in a dataset
+		(1) For the best model, pre-compute the predicted probabilities for all diseases for all possible input combinations and store them in a dataset
 
 - **Initiative 3:** Build an informative and easy-to-use app in a way that helps users better understand  their condition and treat it sooner rather than later
    
    **Epic 1:** 
    - Design and build user interface
 	  
-	  **Stories:** 
-		(1) Build the app with basic functionality - which allows user to enter inputs and then view the disease predictions
-		(2) Expose app to final dataset with the pre-computed predictions
-		(3) Add additional functionalities (such as, information about disease, its severity)
-		(4) Add visualizations talking about the number of yearly cases of a particular disease
+	  
+		  **Stories:** 
+			(1) Build the app with basic functionality - which allows user to enter inputs and then view the disease predictions
+			(2) Expose app to final dataset with the pre-computed predictions
+			(3) Add additional functionalities (such as, information about disease, its severity)
+			(4) Add visualizations talking about the number of yearly cases of diseases
 		
 ## Backlog
 
