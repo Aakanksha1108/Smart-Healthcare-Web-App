@@ -1,0 +1,37 @@
+clean_data:
+  col_names:
+    - age
+    - sex
+    - chest_pain
+    - blood_pressure
+    - serum_cholesterol
+    - fasting_blood_sugar
+    - electrocardiographic
+    - max_heart_rate
+    - induced_angina
+    - ST_depression
+    - slope
+    - no_of_vessels
+    - thal
+    - diagnosis
+
+upload:
+  FILE_LOCATION: /app/data/external/heart.csv
+  S3_BUCKET_NAME: nw-aakanksha-sah-s3
+
+download:
+  S3_BUCKET_NAME: nw-aakanksha-sah-s3
+
+build_models:
+  target_column: diagnosis
+  columns_for_modeling:
+    - age
+    - sex
+    - chest_pain
+    - fasting_blood_sugar
+    - electrocardiographic
+    - induced_angina
+    - thal
+  test_size: 0.3
+  n_estimators: 10
+  max_depth: 3
