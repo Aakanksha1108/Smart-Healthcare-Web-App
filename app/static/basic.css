@@ -4,5 +4,15 @@ body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   font-family: 'Open Sans', sans-serif;
-  background-color:#cdced8;
+  color: white;
 }
+
+h3
+    {
+    font-family:Bahnschrift;
+    color:#7030A0;
+    font-size:40px;
+    position: absolute;
+    left: 435px;
+    top: -2px;
+    }

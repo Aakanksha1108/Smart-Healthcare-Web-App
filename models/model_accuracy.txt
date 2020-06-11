@@ -1,0 +1,19 @@
+Area under the curve
+0.8831360946745562
+
+Confusion matrix
+[[30  9]
+ [13 39]]
+
+Accuracy
+0.7582417582417582
+
+Classification report
+              precision    recall  f1-score   support
+
+           0       0.70      0.77      0.73        39
+           1       0.81      0.75      0.78        52
+
+    accuracy                           0.76        91
+   macro avg       0.76      0.76      0.76        91
+weighted avg       0.76      0.76      0.76        91

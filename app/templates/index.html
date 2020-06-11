@@ -2,42 +2,350 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="static/basic.css" rel="stylesheet">
-</head>
+     <link rel="stylesheet" href="{{url_for("static", filename="basic.css")}}">
+    <link rel="stylesheet" href="{{url_for("static", filename="basic2.css")}}">
+<style>
+    h3
+    {
+    font-family:Bahnschrift;
+    color:#7030A0;
+    font-size:50px;
+    position: absolute;
+    left: 500px;
+    top: -40px;
+    }
+    #inputDiv
+    {
+    background-color: transparent;
+    width: 99%;
+    height: 30%;
+    margin: auto;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    top:130px;
+    position:absolute;
+    color: black;
+    }
+    #outputDiv
+    {
+    font-size:24px;
+    background-color: transparent;
+    width: 99%;
+    height: 30%;
+    margin: auto;
+    display: inline-block;
+    font-family: 'Calibri', sans-serif;
+    top:180px;
+    right:-600px;
+    position:absolute;
+    color: black;
+        }
+    #request_for_input
+    {
+    top:60px;
+    font-family: 'Calibri', sans-serif;
+    position:absolute;
+    color: black;
+    }
+    #col1
+    {
+    font-size:16px;
+    font-family: 'Calibri', sans-serif;
+    top:110px;
+    right:-29px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+    #col2
+    {
+    font-size:16px;
+    font-family: 'Calibri', sans-serif;
+    top:95px;
+    right:-132px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+     #col2_2
+    {
+    font-size:12px;
+    font-family: 'Calibri', sans-serif;
+    top:120px;
+    right:-95px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+     #col3
+    {
+    font-size:16px;
+    font-family: 'Calibri', sans-serif;
+    top:80px;
+    right:-294px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+     #col3_2
+    {
+    font-size:12px;
+    font-family: 'Calibri', sans-serif;
+    top:105px;
+    right:-244px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+    #col4
+    {
+    font-size:16px;
+    font-family: 'Calibri', sans-serif;
+    top:95px;
+    right:-505px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+    #col4_2
+    {
+    font-size:12px;
+    font-family: 'Calibri', sans-serif;
+    top:120px;
+    right:-545px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+    #col5
+    {
+    font-size:16px;
+    font-family: 'Calibri', sans-serif;
+    top:95px;
+    color: black;
+    right:-765px;
+    position:absolute;
+    width: 99%;
+    }
+    #col5_2
+    {
+    font-size:12px;
+    font-family: 'Calibri', sans-serif;
+    top:120px;
+    right:-722px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+    #col6
+    {
+    font-size:16px;
+    font-family: 'Calibri', sans-serif;
+    top:95px;
+    right:-1020px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+    #col6_2
+    {
+    font-size:12px;
+    font-family: 'Calibri', sans-serif;
+    top:120px;
+    right:-1060px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+    #col7
+    {
+    font-size:16px;
+    font-family: 'Calibri', sans-serif;
+    top:80px;
+    right:-1290px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+    #col7_2
+    {
+    font-size:12px;
+    font-family: 'Calibri', sans-serif;
+    top:105px;
+    right:-1265px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+    #col7_3
+    {
+    font-size:12px;
+    font-family: 'Calibri', sans-serif;
+    top:120px;
+    right:-1290px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+    #pct
+    {
+    font-size:25px;
+    font-family: 'Calibri', sans-serif;
+    top:189px;
+    right:-670px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
+    #prov
+    {
+    top:622px;
+    right:-1200px;
+    position:absolute;
+    width: 99%;
+    color: black;
+    }
 
+</style>
+</head>
 <body>
     <h3>
-         <a href = "{{ url_for('index') }}">Penny Lane Music Recommender</a>
+         <a href = "{{ url_for('index') }}">Smart  Healthcare  App</a>
     </h3>
 
     <hr/>
-    <table>
+     <div id="request_for_input">
+         <b><u>PLEASE ENTER YOUR DETAILS:</u></b>
+      </div>
+
+    <div id="col1">
+    <p>
+        <b>Age</b>
+    </p>
+    </div>
+
+    <div id="col2">
+    <p>
+        <b>Sex</b>
+    </p>
+    </div>
+
+    <div id="col3">
+    <p>
+        <b>Chest Pain</b>
+    </p>
+    </div>
+
+        <div id="col2_2">
+    <p>
+        (1 = Male; 0 = Female)
+    </p>
+    </div>
+
+    <div id="col3_2">
+    <p>
+        (0 = typical angina; 1 = atypical angina;<br> 2 = non-anginal pain; 3:asymptotic)
+    </p>
+    </div>
+
+    <div id="col4">
+    <p>
+        <b>Blood sugar > 120 mg/dl</b>
+    </p>
+    </div>
+
+    <div id="col4_2">
+    <p>
+        (1 = Yes; 0 = No)
+    </p>
+    </div>
+
+    <div id="col5">
+    <p>
+        <b>Resting ecg results</b>
+    </p>
+    </div>
+
+    <div id="col5_2">
+    <p>
+       (0 = normal; 1 = having ST-T; 2 = hypertrophy)
+    </p>
+    </div>
+
+    <div id="col6">
+    <p>
+        <b>Exercise induced angina</b>
+    </p>
+    </div>
+
+    <div id="col6_2">
+    <p>
+       (1 = Yes; 0 = No)
+    </p>
+    </div>
+
+    <div id="col7">
+    <p>
+      <b>Thalassemia</b>
+    </p>
+    </div>
+
+    <div id="col7_2">
+    <p>
+       (0 = normal; 1 = fixed defect;
+    </p>
+    </div>
+
+    <div id="col7_3">
+    <p>
+      2 = reversable defect)
+    </p>
+    </div>
+
+    <div id="pct">
+    <p>
+      %
+    </p>
+    </div>
+
+
+
+    <div id="inputDiv">
+
+      <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+        <input type=text size=10 name=age placeholder="Age">
+        <input type=text size=10 name=sex placeholder="Sex">
+        <input type=text size=35 name=chest_pain placeholder="Chest Pain">
+        <input type=text size=30 name=fasting_blood_sugar placeholder="Fasting blood sugar">
+        <input type=text size=35 name=electrocardiographic placeholder="ECG">
+        <input type=text size=35 name=induced_angina placeholder="Induced Angina">
+        <input type=text size=25 name=thal placeholder="Thal">
+        <input type=submit value=Submit>
+      </dl>
+      </form>
+    </div>
+    <hr/>
+    <div id="outputDiv">
+        <table>
          <thead>
             <tr>
-               <th>Title</th>
-               <th>Artist</th>
-               <th>Album</th>
+               <th>RISK OF HEART DISEASE IS :</th>
             </tr>
          </thead>
 
          <tbody>
-            {% for track in tracks %}
+                 {% for prediction in predictions %}
                <tr>
-                   <td>{{ track.title }}</td>
-                   <td>{{ track.artist }}</td>
-                   <td>{{ track.album }}</td>
+                   <td>{{ prediction.y_prob }}</td>
                </tr>
-            {% endfor %}
+                {% endfor %}
          </tbody>
       </table>
-      <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
-      <dl>
-        <input type=text size=15 name=title placeholder="Title">
-        <input type=text size=15 name=artist placeholder="Artist">
-        <input type=text size=15 name=album placeholder="Album">
-        <input type=submit value=Add>
-      </dl>
-    </form>
-
+    </div>
+    <!--- <img src="{{url_for("static", filename="pic_trulli.jpg")}}" alt="Trulli" width="500" height="333"> -->
+    <div id="prov">
+    <p> - Aakanksha Sah <br> Master of Science in Analytics, 2020 <br> Northwestern University </p>
+        </div>
 </body>
 </html>
